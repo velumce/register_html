@@ -1,0 +1,71 @@
+<html>
+    <title>
+        Registration page
+    </title>
+    <style>
+        .container{
+            height:100vh;
+            width:100%;
+            background-color:cornsilk;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form{
+            height:auto;
+            width:300px;
+            background-color: rgb(160, 206, 115);
+            padding:50px;
+        }
+        input{
+            height:50px;
+            width:90%;
+            margin-bottom: 20px;
+            border:1px solid burlywood
+        }
+        button{
+            height:50px;
+            width:90%;
+            background-color: rgb(245, 248, 117);
+            border:none;
+            color:rgb(33, 114, 114)
+        }
+    </style>
+    <body>
+        
+        <div class="container">
+            <div class="form">
+                <h2>Registration</h2>
+                <form>
+                    <label>Name</label><br>
+                    <input id="name" type="text">
+                    <label>email</label>
+                    <input id="email" type="email" /><br>
+                    <label>password</label>
+                    <input id="pass" type="password"><br>
+                </form>
+                <button onclick="savedata()">Submit</button>
+            </div>
+        </div>
+    </body>
+    <script>
+        function savedata(){
+            let name=document.getElementById("name").value
+            let email=document.getElementById("email").value
+            let pass=document.getElementById("pass").value
+            if(name==""){
+                alert("enter name")
+            }    
+            else if(email==""){
+                alert("enter email")
+            }    
+            else if(pass==""){
+                alert("enter login password")
+            }    
+            else{
+                alert("success"+ name + email + pass)
+            }
+
+        }
+    </script>
+</html>
